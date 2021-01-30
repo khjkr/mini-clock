@@ -1,0 +1,15 @@
+{
+  "name": "mini-clock",
+  "version": "1.0.0",
+  "description": "일렉트론 기반으로 제작한 작은 시계 프로그램",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "git@github.com:khjkr/mini-clock.git",
+  "author": "Hyunjun Kim <hyunjun5216@naver.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.2.1"
+  }
+}
