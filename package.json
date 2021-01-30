@@ -4,12 +4,54 @@
   "description": "일렉트론 기반으로 제작한 작은 시계 프로그램",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build",
+    "build:osx": "build --mac",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
+  },
+  "build": {
+    "productName": "Mini Clock",
+    "appId": "com.khjkr.miniclock",
+    "asar": true,
+    "protocols": {
+      "name": "Mini Clock",
+      "schemes": [
+        "Mini Clock"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./asset/icon.ico"
+    },
+    "dmg": {
+      "title": "Mini Clock",
+      "icon": "./asset/icon.ico"
+    },
+    "win": {
+      "target": [{
+        "target": "nsis",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }],
+      "icon": "./asset/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./asset/icon.ico",
+      "createDesktopShortcut": true
+    }
   },
   "repository": "git@github.com:khjkr/mini-clock.git",
   "author": "Hyunjun Kim <hyunjun5216@naver.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^11.2.1"
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1"
   }
 }
