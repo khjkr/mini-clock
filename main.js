@@ -1,4 +1,5 @@
 // Modules to control application life and create native browser window
+require('v8-compile-cache')
 const { app, BrowserWindow } = require('electron')
 
 function createWindow () {
@@ -6,7 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     titleBarStyle: 'hidden',
     width: 400,
-    height: 150
+    height: 170
   })
 
   // and load the index.html of the app.

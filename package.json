@@ -31,13 +31,15 @@
       "icon": "./asset/icon.png"
     },
     "win": {
-      "target": [{
-        "target": "nsis",
-        "arch": [
-          "x64",
-          "ia32"
-        ]
-      }],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
       "icon": "./asset/icon.png"
     },
     "nsis": {
@@ -53,5 +55,8 @@
   "devDependencies": {
     "electron": "^11.2.1",
     "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "v8-compile-cache": "^2.2.0"
   }
 }
