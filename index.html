@@ -6,6 +6,14 @@
   <title>Mini Clock</title>
 </head>
 <body>
-  <h1>Main page</h1>
+  <div class="clock">
+    <h1>00:00:00</h1>
+  </div>
+  <script>
+    (function (){
+      const clock = document.querySelector('h1')
+      clock.textContent = new Date()
+    })()
+  </script>
 </body>
 </html>
