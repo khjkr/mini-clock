@@ -13,7 +13,7 @@ function getTime() {
 }
 
 function init() {
-  setInterval(getTime, 1000);
+  setInterval(getTime, 1000)
 }
 
 init()
