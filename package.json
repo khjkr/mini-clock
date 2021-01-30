@@ -6,9 +6,9 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build",
-    "build:osx": "build --mac",
-    "build:win32": "build --win --ia32",
-    "build:win64": "build --win --x64"
+    "build:osx": "electron-builder --mac",
+    "build:win32": "electron-builder --win portable --ia32",
+    "build:win64": "electron-builder --win portable --x64"
   },
   "build": {
     "productName": "Mini Clock",
@@ -24,11 +24,11 @@
       "target": [
         "default"
       ],
-      "icon": "./asset/icon.ico"
+      "icon": "./asset/icon.png"
     },
     "dmg": {
       "title": "Mini Clock",
-      "icon": "./asset/icon.ico"
+      "icon": "./asset/icon.png"
     },
     "win": {
       "target": [{
@@ -38,12 +38,12 @@
           "ia32"
         ]
       }],
-      "icon": "./asset/icon.ico"
+      "icon": "./asset/icon.png"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "./asset/icon.ico",
+      "installerIcon": "./asset/icon.png",
       "createDesktopShortcut": true
     }
   },
