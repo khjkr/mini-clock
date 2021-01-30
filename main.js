@@ -4,12 +4,14 @@ const { app, BrowserWindow } = require('electron')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
+    titleBarStyle: 'hidden',
     width: 400,
-    height: 180
+    height: 150
   })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  mainWindow.setAutoHideMenuBar(true)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

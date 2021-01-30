@@ -1,6 +1,6 @@
 {
   "name": "mini-clock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "일렉트론 기반으로 제작한 작은 시계 프로그램",
   "main": "main.js",
   "scripts": {

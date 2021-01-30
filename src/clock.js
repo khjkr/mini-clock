@@ -3,7 +3,7 @@ const clockContainer = document.querySelector(".clock"),
 
 function getTime() {
   const date = new Date()
-  const hours = 13
+  const hours = date.getHours()
   const minutes = date.getMinutes()
   const seconds = date.getSeconds()
   const apm = hours < 12 ? '오전' : '오후'
