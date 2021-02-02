@@ -6,6 +6,10 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     titleBarStyle: 'hidden',
+    transparent: true,
+    fullscreenable: false,
+    alwaysOnTop: true,
+    resizable: false,
     width: 400,
     height: 170
   })
