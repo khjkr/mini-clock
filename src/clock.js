@@ -15,11 +15,16 @@ function getTime() {
   const seconds = date.getSeconds()
   const apm = hours < 12 ? '오전' : '오후'
 
-  dateTitle.innerText = `${year}년 ${month}월 ${day}일 (${dow})`
+  textUpdate(year, month, day, dow, apm, hours, minutes, seconds)
+}
+
+function textUpdate(a, b, c, d, e, f, g, h) {
+  f = f < 13 ? f : f - 12
+  g = g < 10 ? `0${g}` : g
+  h = h < 10 ? `0${h}` : h
   
-  clockTitle.innerText = `${apm} ${hours < 13 ? hours : hours - 12}시 ${
-    minutes < 10 ? `0${minutes}` : minutes
-  }분 ${seconds < 10 ? `0${seconds}` : seconds}초`
+  dateTitle.innerText = `${a}년 ${b}월 ${c}일 (${d})`
+  clockTitle.innerText = `${e} ${f}시 ${g}분 ${h}초`
 }
 
 function init() {
